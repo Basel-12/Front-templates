@@ -1,0 +1,13 @@
+# Front-end Style Guide
+
+## Colors
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%)
+
+### Font
+
+- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
