@@ -97,11 +97,22 @@ nav .container ul{
     justify-content: space-between;
     align-items:center ;
     width: 600px;
+    position: relative;
 }
 @media (width <= 992px) {
     nav .container ul{
         width: 300px;
     }
+}
+
+nav .container ul::before{
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--Dark-Blue) transparent;
+    top: -20px;
+    right: 0;
 }
 
 @media (width <=768px) {
@@ -111,15 +122,27 @@ nav .container ul{
     }
 }
 
-/* @media (width <=768px){
+@media (width <=768px){
     nav .container .links .icon:hover + ul{
-        display: flex;
-        flex-direction: column;
+        display: block;
+        background: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+        padding: 10px;
         position: absolute;
-        background-color: red;
-        width: 80px;
+        right: 0;
+        top: calc(100%  + 15px);
+        width: 200px;
     }
-} */
+}
+
+nav .container ul li{
+    padding: 10px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
 nav .container ul li a{
     font-size: 20px;
     color: var(--Very-Light-Gray);
@@ -412,9 +435,7 @@ footer .container .links{
         margin-bottom: 20px;
     }
 }
-footer .container .links ul{
 
-}
 
 footer .container .links ul li:not(:last-child){
     margin-bottom: 10px;
