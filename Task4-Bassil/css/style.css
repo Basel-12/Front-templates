@@ -113,6 +113,13 @@ nav .container ul::before{
     border-color: transparent transparent var(--Dark-Blue) transparent;
     top: -20px;
     right: 0;
+    display: none;
+}
+
+@media (width > 768px) {
+    nav .container ul::before{
+        display: none;
+    }
 }
 
 @media (width <=768px) {
