@@ -1283,14 +1283,8 @@ body{
     left: 0;
 }
 
-@media (width < 992px) {
-    .events .dots-down{
-        left: -65px;
-        bottom: 0;
-    }
-}
 
-@media (width < 768px) {
+@media (width < 992px) {
     .events .dots{
         display: none;
     }
