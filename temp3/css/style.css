@@ -1189,7 +1189,11 @@ body{
     margin-right: 30px;
 }
 
-
+@media (width < 768px) {
+    .work-steps .container .info .box img{
+        margin-right: 0;
+    }
+}
 .work-steps .container .info .box{
     background-color: #f6f5f5;
     padding: 30px;
@@ -1287,12 +1291,8 @@ body{
 }
 
 @media (width < 768px) {
-    .events .dots-down{
-        left: -100px;
-        bottom: -30px;
-    }
-    .events .dots-up{
-        right: -100px;
+    .events .dots{
+        display: none;
     }
 }
 .events .container{
