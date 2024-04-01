@@ -1285,7 +1285,7 @@ body{
 
 
 @media (width < 992px) {
-    .events .dots{
+    .dots{
         display: none;
     }
 }
