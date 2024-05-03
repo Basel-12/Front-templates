@@ -1,0 +1,222 @@
+:root{
+    --buttons-color:#ffffff;
+    --arth-color:#f1916d;
+    --dark-arth-color:#f1916d;
+    --secondy-color:#f3c2af;
+    --clear-color:#f44951;
+    --dark-mode:#000000;
+    --dark-mode-buttons:#333333;
+    --second-color:#f6f6f6;
+    --back-color:#fff3f3;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    cursor: pointer;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    background-color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+@media (width < 768px) {
+    body.white{
+        background-color: var(--back-color);
+    }
+    body.dark{
+        background-color: var(--dark-mode);
+    }
+}
+
+.calculator{
+    width: 400px;
+    height: 50em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    overflow: hidden;
+}
+
+
+.calculator.white{
+    background-color:var(--back-color);
+}
+
+
+.toggle-checkbox{
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch{
+    position: relative;
+    background-color: var(--arth-color);
+    width: 78px;
+    height: 32px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.toggle-switch::before{
+    content: url(../images/sun-color-icon.svg);
+    width: 24px;
+    background-color: var(--secondy-color);
+    border-radius: 50%;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-switch{
+    background-color: var(--dark-mode-buttons);
+}
+
+.toggle-checkbox:checked + .toggle-switch::before{
+    content: url(../images/moon.svg);
+    left: 50px;
+    background-color: var(--arth-color);
+}
+
+.calculator .all .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.calculator .all .buttons .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calculator .all .buttons .row .btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.calculator.dark .all .buttons .row .btn{
+    color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    
+    
+}
+.calculator.white .all .buttons .btn.arth{
+    background-color: var(--arth-color);
+}
+.calculator.dark .all .buttons .btn.arth{
+    background-color: var(--dark-arth-color);
+}
+.calculator .all .buttons .btn.sec{
+    background-color: var(--secondy-color);
+    color: black;
+}
+.calculator .all .buttons .row .btn.clear{
+    background-color: var(--clear-color);
+}
+
+.calculator.white .all .buttons .row .btn.num{
+    background-color: var(--buttons-color);
+}
+.calculator.dark .all .buttons .row .btn.num{
+    background-color: var(--dark-mode-buttons);;
+}
+
+.calculator .all .result{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+    margin: 30px 5px;
+    transition: font-size 0.3s;
+    -webkit-transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s;
+    -ms-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
+    overflow: auto;
+}
+
+.calculator .all .result .answer{
+    font-size: 20px;
+    transition: font-size 0.3s;
+    -webkit-transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s;
+    -ms-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
+}
+
+.calculator .all .result .operation{
+    font-size: 40px;
+    overflow-x: hidden;
+    transition: font-size 0.3s;
+    -webkit-transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s;
+    -ms-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
+    text-align: right;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.calculator.dark{
+    background-color: var(--dark-mode);
+    color: white;
+}

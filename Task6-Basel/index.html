@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="website icon" href="images/180daraga.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator white">
+        <div class="mode">
+            <label>
+                <input type="checkbox" class="toggle-checkbox" >
+                <div class="toggle-switch">
+                </div>
+            </label>
+        </div>
+        <div class="all">
+            <div class="result">
+                <div class="answer">0</div>
+                <div class="operation"></div>
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <button class="btn clear" value="C">C</button>
+                    <button class="btn sec del" value="del"><i class="fa-solid fa-delete-left"></i></button>
+                    <button class="btn sec number" value="%">%</button>
+                    <button class="btn arth number" value="/">/</button>
+                </div>
+                <div class="row">
+                    <button class="btn num number" value="7">7</button>
+                    <button class="btn num number" value="8">8</button>
+                    <button class="btn num number" value="9">9</button>
+                    <button class="btn arth number" value="*">*</button>
+                </div>
+                <div class="row">
+                    <button class="btn num number" value="4">4</button>
+                    <button class="btn num number" value="5">5</button>
+                    <button class="btn num number" value="6">6</button>
+                    <button class="btn arth number" value="-">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn num number" value="1">1</button>
+                    <button class="btn num number" value="2">2</button>
+                    <button class="btn num number" value="3">3</button>
+                    <button class="btn arth number" value="+">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn num number" value=".">.</button>
+                    <button class="btn num number" value="0">0</button>
+                    <button class="btn num number" value="00">00</button>
+                    <button class="btn arth equal" value="=">=</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -3,6 +3,9 @@ let section = document.getElementById("stats");
 
 let check  = false;
 
+let skill = document.querySelectorAll(".skills .skill");
+let skillsection = document.getElementById("our-skills");
+
 window.onscroll = function() {
     if(window.scrollY >= section.offsetTop) {
         if(!check){
@@ -22,3 +25,16 @@ function startcount(el) {
     }
 },1000/goal)
 };
+
+
+function startwidth(e){
+    let goal = e.dataset.width;
+    let count = setInterval(() => {
+        e.style.width++;
+        if(e.style.width == goal)
+        {
+            clearInterval(count);
+        }
+    }, 1000/goal);
+}
+
