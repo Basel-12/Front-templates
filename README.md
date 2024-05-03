@@ -10,3 +10,6 @@ https://basel-12.github.io/Front-templates/temp3
 
 ## Demo for temp4
 https://basel-12.github.io/Front-templates/temp4
+
+## Demo for task6
+https://basel-12.github.io/Front-templates/Task6-Basel
