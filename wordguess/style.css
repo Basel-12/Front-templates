@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#f44336;
+    --in-place: #f89e13;
+    --out-of-place: #18ba89;
+    --wrong-color: #27303f;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    /* border: 5px solid; */
+    width: 1200px;
+    background-color: #eee;
+}
+
+.container h1{
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 50px;
+    background-color: white;
+}
+
+.container .guess-game{
+    width: 1100px;
+    display: flex;
+    margin: 20px auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color:gray ; */
+    .game-area{
+        text-align: center;
+        .inputs {
+            > div {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                font-size: 30px;
+                margin-right: 15px;
+                font-weight: bold;
+              }
+            }
+            .disabled-inputs {
+              opacity: 0.5;
+              pointer-events: none;
+            }
+            input {
+              margin: 0 5px;
+              width: 60px;
+              height: 60px;
+              text-align: center;
+              font-size: 50px;
+              caret-color: var(--primary-color);
+              background: white;
+              border: none;
+              border-bottom: 3px solid #333;
+              &:focus {
+                outline-color: #ccc;
+              }
+              &.yes-in-place {
+                background-color: #f89e13;
+                border: #f89e13;
+                color: white;
+              }
+              &.not-in-place {
+                background-color: #18ba89;
+                border: #18ba89;
+                color: white;
+              }
+              &.no {
+                background-color: #27303f;
+                border: #27303f;
+                color: white;
+              }
+            }
+        }
+        .controls{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            gap: 10px;
+            width: 500px;
+            #check{
+                background-color: var(--primary-color);
+                flex: 1;
+            }   
+
+            #hint{
+                background-color: #009688;
+                width: fit-content;
+            }
+            button{
+                border: none;
+                font-size: 25px;
+                padding: 15px 20px;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+            }
+            button:disabled {
+                background-color: black;
+                opacity: 0.4;
+                cursor: no-drop;
+            }
+        }
+        .message {
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            span {
+                font-weight: bold;
+                display: block;
+                font-size: 50px;
+                color: var(--primary-color);
+                text-transform: capitalize;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+
+
+.container .key-colors{
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .key-color{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        background-color: white;
+        padding: 15px;
+        .key{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .in-place{
+            background-color: var(--in-place);
+        }
+        .not-in-place{
+            background-color: var(--out-of-place);
+        }
+        .no{
+            background-color: var(--wrong-color);
+        }
+
+        .key-text{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
