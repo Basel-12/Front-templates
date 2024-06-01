@@ -13,3 +13,6 @@ https://basel-12.github.io/Front-templates/temp4
 
 ## Demo for task6
 https://basel-12.github.io/Front-templates/Task6-Basel
+
+##Demo for word guess game
+https://basel-12.github.io/Front-templates/wordguess
