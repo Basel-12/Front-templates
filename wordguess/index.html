@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guess</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" href="puzzle.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Guessing</h1>
+        <div class="guess-game">
+            <div class="game-area">
+                <div class="inputs"></div>
+                <div class="controls">
+                    <button id="check">Check Word</button>
+                    <button id="hint">Hint (<span></span>)</button>
+                </div>
+                <div class="message"></div>
+            </div>
+        <div class="key-colors">
+                <h2>Key Colors</h2>
+            <div class="key-color">
+                <div class="key in-place"></div>
+                <div class="key-text">Letter Is Correct and In Place</div>
+            </div>
+            <div class="key-color">
+                <div class="key not-in-place"></div>
+                <div class="key-text">Letter Is Correct But Not In Place</div>
+            </div>
+            <div class="key-color">
+                <div class="key no"></div>
+                <div class="key-text">Letter Is Wrong</div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
