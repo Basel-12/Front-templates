@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="website icon" href="images/checklist.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page white">
+        <div class="sidebar">
+            <div class="head">
+                <h3><span>To</span>do</h3>
+                <div>
+                    <label>
+                        <input type="checkbox" name="" id="" class="toggle-checkbox" >
+                        <div class="toggle-switch"></div>
+                    </label>
+                </div>
+            </div>
+            <ul>
+                <li><a href="">
+                    <i class="fa-solid fa-list"></i>
+                    <span>Tasks</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="head">
+                <div class="title">Tasks</div>
+                <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="today"></span>
+                </div>
+            </div>
+
+            <div class="add-form">
+                <button class="addtask">New task <span><i class="fa-solid fa-angle-down"></i></span></button>
+                <div class="drop-down-form">
+                    <form >
+                        <label for="title">Title</label>
+                        <input type="text" id="title">
+                        <label for="taskdate">Date</label>
+                        <input type="date" name="" id="taskdate">
+                        <button class="add btn">Add</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tasks">
+                
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
