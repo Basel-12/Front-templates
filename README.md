@@ -16,3 +16,6 @@ https://basel-12.github.io/Front-templates/Task6-Basel
 
 ## Demo for word guess game
 https://basel-12.github.io/Front-templates/wordguess
+
+## Demo for to do list
+https://basel-12.github.io/Front-templates/todolist
