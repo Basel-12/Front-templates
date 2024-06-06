@@ -51,7 +51,7 @@ a{
 @media (width <= 768px) {
     .page .sidebar{
         width: 70px;
-        height: auto;
+        min-height: 100vh;
         padding: 10px;
     }
     .page .sidebar:hover{
@@ -296,7 +296,7 @@ a{
 
 @media (width <= 768px) {
     .page .content .add-form .drop-down-form{
-        width: 300px;
+        width: 250px;
     }
 }
 .page.white .content .add-form .drop-down-form{
@@ -347,6 +347,7 @@ a{
 @media (width <= 768px) {
     .page .content .tasks{
         margin: 20px 10px 0px;
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     }
 }
 .page.white .content .tasks{background-color: var(--sidebar-color);}
