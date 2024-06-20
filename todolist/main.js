@@ -23,18 +23,50 @@ today.innerHTML = now.toDateString();
 let moodclicked =  false;
 let formclicked = false;
 
+window.onload = function() {
+    if(getCookie("mood") == "dark"){
+        page.classList.remove("white");
+        page.classList.add("dark");
+        moodclicked = true;
+    }
+    else{
+        page.classList.remove("dark");
+        page.classList.add("white");
+        moodclicked = false;
+    }
+};
 
-
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
 //change dark and white mood
 mood.addEventListener("click",function () {
     if(!moodclicked){
         page.classList.remove("white");
         page.classList.add("dark");
+        setCookie("mood","dark",30);
         moodclicked = true;
     }else{
         page.classList.remove("dark");
         page.classList.add("white");
         moodclicked = false;
+        setCookie("mood","white",30);
     }
 });
 
@@ -108,24 +140,29 @@ function loadTasks(){
         let tassktitle = document.createElement("div");
         tassk.classList.add("task");
         tassk.style.backgroundColor = `${task.background}`;
+        console.log(task.iscompleted)
         tasskhead.classList.add("taskhead");
-        if(task.iscompleted == true){
-            tassk.classList.add("completed");
+        if(task.iscompleted === true){
+            tassk.classList.add("complete");
             tasskhead.innerHTML = `
             <div class="taskdate-complete">
+            <input type="hidden" value="${task.id}" class="id"">
             <i class="fa-solid fa-check"></i>
             <div class="taskdate">${task.date}</div>
         </div>
         <i class="fa-solid fa-arrow-trend-up"></i>
             `;
-        }
+        }else{
+        // tassk.classList.remove("complete");
         tasskhead.innerHTML = `
         <div class="taskdate-complete">
+            <input type="hidden" value="${task.id}" class="id"">
             <i class="fa-solid fa-check"></i>
             <div class="taskdate">${task.date}</div>
         </div>
         <i class="fa-solid fa-arrow-trend-up"></i>
         `;
+        }
         tassktitle.classList.add("title");
         tassktitle.innerHTML = `${task.name}`;
         tassk.appendChild(tasskhead);
@@ -137,9 +174,21 @@ function loadTasks(){
 loadTasks();
 
 let alltasks = document.querySelectorAll(".task");
-console.log(alltasks);
-alltasks.forEach(function (task) {
+alltasks.forEach(function (task, index) {
     task.addEventListener("click",function () {
         task.classList.toggle("complete");
+        const inp = task.querySelector(".taskdate-complete .id").value;
+        // console.log(inp);
+        if(JSON.parse(localStorage.getItem("data")))
+            data = JSON.parse(localStorage.getItem("data"));
+        if(data.tasks[inp - 1].iscompleted == true){
+            data.tasks[inp - 1].iscompleted = false;
+            localStorage.setItem("data",JSON.stringify(data));
+        }
+        else{
+            data.tasks[inp - 1].iscompleted = true;
+            localStorage.setItem("data",JSON.stringify(data));
+        }
+        
     });
 });
