@@ -1,4 +1,4 @@
-Front end templates using html css JS
+Front end templates using html css J
 ## Demo for Template1 
 https://basel-12.github.io/Front-templates/temp1
 
